@@ -6,3 +6,4 @@
 **/terraform.tfvars
 **/.idea/
 **/.metadata/
+**/.vagrant/
