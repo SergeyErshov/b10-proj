@@ -1,0 +1,21 @@
+- name: Configuring vm
+  hosts: all
+  gather_facts: false
+  become: true
+  become_user: "root"
+  become_method: "sudo"
+
+  tasks:
+  
+    - name: install ptyhon and python-pip
+      apt:
+        pkg:
+          - python3
+          - python3-pip
+          - python3-psycopg2
+        update_cache: true
+
+    - name: install Django using pip
+      shell:
+        cmd: "pip install Django"
+      
